@@ -4,7 +4,7 @@ Last Updated: 2026-09-08
 
 Build working products with Agents24 from your coding agent. The official `agents24-platform` skill helps your agent create resources, use the CLI, and integrate streaming chat into a new or existing app.
 
-## Install
+## Installation
 
 ```bash
 npx skills add agents24/skills --skill agents24-platform
