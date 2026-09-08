@@ -8,11 +8,12 @@ Use a trusted backend when it owns authentication or needs organization-level AP
 import { Agents24 } from "@agents24/node";
 
 const agents24 = new Agents24({
+  baseUrl: "https://api.agents24.dev",
   apiKey: process.env.AGENTS24_API_KEY!,
 });
 ```
 
-The default API is `https://api.agents24.dev`. Use an explicit base URL only for a different intended deployment. Read installed package types and [Node](https://docs.agents24.dev/sdk/node) or [Python](https://docs.agents24.dev/sdk/python) docs for exact calls.
+The trusted SDK requires an explicit API base URL. Use `https://api.agents24.dev` for the public platform. Read installed package types and [Node](https://docs.agents24.dev/sdk/node) or [Python](https://docs.agents24.dev/sdk/python) docs for exact calls.
 
 ## Browser-facing backend
 
