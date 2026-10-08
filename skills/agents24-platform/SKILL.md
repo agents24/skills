@@ -5,7 +5,7 @@ description: Build customer apps and integrations with Agents24 using its offici
 
 # Build with Agents24
 
-Last Updated: 2026-09-08
+Last Updated: 2026-10-08
 
 Turn the customer's idea into a working product. Preserve an existing application's framework, authentication, and layout. For a new chat app, prefer `npm create agents24-app@latest` with the BFF integration.
 
@@ -16,6 +16,7 @@ Ask the essential product questions together: who uses it, which knowledge is ap
 - [Resource authoring](references/resource-authoring.md): create, validate, sync, and publish Agents, Instructions, knowledge, and tools.
 - [Product surfaces](references/product-surfaces.md): generate an app, extend an existing interface, or share a hosted agent.
 - [Server integration](references/server-integration.md): configure credentials, identity, and trusted Node/Python runtime.
+- [Managed ingestion](references/managed-ingestion.md): customer partitions, resumable document/media jobs, indexed-content cleanup and citation evidence.
 
 Use [official docs](https://docs.agents24.dev) and installed package types for exact API signatures and schemas. Never invent exports or commands. If a required capability is unavailable in the installed release, report it instead of copying package internals.
 

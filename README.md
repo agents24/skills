@@ -1,8 +1,8 @@
 # Agents24 skills
 
-Last Updated: 2026-09-08
+Last Updated: 2026-10-08
 
-Build working products with Agents24 from your coding agent. The official `agents24-platform` skill helps your agent create resources, use the CLI, and integrate streaming chat into a new or existing app.
+Build working products with Agents24 from your coding agent. The official `agents24-platform` skill helps your agent create resources, use the CLI, and integrate streaming chat, customer partitions and managed document/media ingestion into a new or existing app.
 
 ## Installation
 
@@ -33,3 +33,7 @@ The coding-agent skill is separate from runtime Skills, which are Instructions l
 ## License
 
 MIT.
+
+## Coordinated feature availability
+
+The ingestion reference documents the prepared Node 0.5.24 / Python 0.7.17 train. Publish this skill repository separately alongside the platform/docs/package release; registry version assignment alone is not availability. Existing skill installations must refresh or reinstall to receive new guidance. Check the public capability catalog and installed types before executing a new API.
