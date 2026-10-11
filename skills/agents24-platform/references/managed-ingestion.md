@@ -1,6 +1,6 @@
 # Managed ingestion and customer partitions
 
-Last Updated: 2026-10-08
+Last Updated: 2026-10-11
 
 Use this reference for customer libraries, document/media processing, indexed-output cleanup and grounded chat. Keep application authentication, customer identity, originals and publication in the consuming application.
 
@@ -42,3 +42,12 @@ Replacement is ingest revision B, confirm success, select B in the application, 
 Preserve canonical evidence through retrieval, source/citation events and persisted message blocks. It includes content/revision/generation, chunk/segments, physical PDF pages or original-media ranges; DOCX has semantic references without invented page numbers. Render and authorize links in the app. Citation identity validation does not prove semantic claim support.
 
 Managed Drive import, Supabase output delivery and completion webhooks are deferred. Polling is supported. Do not imply those connectors exist, require a new customer registry, or create an Agents24 document-management UI.
+
+
+## Retention and complete processed results
+
+With Node 0.5.26 / Python 0.7.19 or newer, use typed `listSteps`, `getStepData`, `getStepField`, `downloadStepData`, `getResult`, and `getProcessedContent` on Node `ingestionJobs` (snake_case under Python `ingestion_jobs`). Verify their presence and promoted versions in the capability catalog; do not invent missing exports. These reads require `pipelines.read`. Resolve a processing output's `processed_ref` through `getProcessedContent` to collect full sections/transcripts and source locations, then save any permanent application copy yourself.
+
+Inspection defaults to retrieval Off and ingestion seven days. Organization choices are Off/1/7/30/90 days; graph `metadata.inspection_days` overrides or inherits. Policies snapshot at job admission. Use returned availability reasons for disabled, expired, limited or unavailable inspection. Historical `reference_id` selection is restricted to its owning job/node/port. Hosted downloads return short-lived signed gzip links; local development may return JSON.
+
+Standalone asynchronous retrieval delivery lasts 24 hours. Agent results keep their existing Agent/tool/snapshot/message lifecycle after handoff; indexed knowledge is unaffected. Optional capture costs 2,000 Platform Units/GiB compressed uploaded plus existing storage rent; shared recovery/results incur no duplicate upload charge. Budgets skip optional inspection without failing valid execution. Existing frozen periods without this rate report `rate_unavailable`; do not promise optional capture is enabled for every existing period. Active ingestion inputs/recovery remain protected, followed by seven days of recovery. Old terminal inline history gets a 30-day rollout grace. Retention is finite; export while available.
